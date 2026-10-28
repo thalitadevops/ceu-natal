@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Céu Natal · Seu mapa astral com leitura completa</title>
+  <meta name="description" content="Calcule seu mapa astral natal de graça e receba uma leitura completa e personalizada sobre personalidade, carreira, dinheiro, amor e propósito, em PDF.">
+  <meta property="og:title" content="Céu Natal: o céu do minuto em que você nasceu">
+  <meta property="og:description" content="Mapa astral calculado com precisão e leitura personalizada sobre carreira, dinheiro, amor e propósito.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#141737">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#fazer">Ir para o formulário</a>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Céu Natal, início">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1"/><path d="M16 1.5v29M1.5 16h29" stroke="currentColor" stroke-width=".8"/><circle cx="21.6" cy="10.4" r="2" fill="currentColor"/></svg>
+      <span>Céu Natal</span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#como">Como funciona</a>
+      <a href="#leitura">A leitura</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="nav-cta" href="#fazer">Fazer meu mapa</a>
+    </nav>
+  </header>
+
+  <main id="landing">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>O céu não para de girar. O seu mapa é o instante em que ele parou para você.</h1>
+        <p class="lede">Com a data, o horário e a cidade do seu nascimento, desenhamos o céu exato daquele minuto e explicamos o que ele diz sobre a sua personalidade, seus talentos, sua carreira, sua relação com o dinheiro e com o amor.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="#fazer">Calcular meu mapa grátis</a>
+          <span class="hero-note">O desenho do mapa é gratuito. A leitura completa é opcional.</span>
+        </div>
+        <p id="saved-banner" class="saved-banner" hidden>Você tem uma leitura salva neste aparelho. <button type="button" class="linklike" id="open-saved">Abrir minha leitura</button></p>
+      </div>
+      <figure class="hero-sky">
+        <div id="live-wheel" class="live-wheel" aria-live="off"></div>
+        <figcaption id="live-caption">O céu de agora, visto de São Paulo.</figcaption>
+      </figure>
+    </section>
+
+    <section id="como" class="block como">
+      <div class="block-head">
+        <h2>Um retrato do céu, não uma previsão</h2>
+        <p>A astrologia é um conhecimento antigo que relaciona a posição dos astros com a experiência humana. Usada como ferramenta de autoconhecimento, ela ajuda a dar nome ao que você já sente e a enxergar com mais clareza os seus caminhos.</p>
+      </div>
+      <div class="como-grid">
+        <p class="como-text">O <strong>mapa astral natal</strong> é a fotografia do céu no momento exato do seu nascimento, visto do lugar onde você nasceu. Como o céu muda a cada minuto, a combinação de planetas, signos e casas do seu mapa é só sua. Ele funciona como um retrato da sua personalidade, dos seus potenciais, dos seus desafios e do seu propósito.</p>
+        <dl class="inputs">
+          <div><dt>Data</dt><dd>Mostra em que signo estavam o Sol, a Lua e cada planeta.</dd></div>
+          <div><dt>Horário</dt><dd>Define o Ascendente e as doze casas, que dizem em que áreas da vida cada energia aparece.</dd></div>
+          <div><dt>Cidade</dt><dd>Ajusta o céu para o seu ponto exato do planeta e o fuso horário daquela época.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="leitura" class="block leitura">
+      <div class="block-head">
+        <h2>O que a leitura completa explica</h2>
+        <p>Cada tema é analisado a partir das posições do seu mapa, com linguagem simples e sem "astrologuês". Ao lado, onde olhamos no céu para falar de cada assunto.</p>
+      </div>
+      <ul class="areas">
+        <li><span class="ag g" aria-hidden="true">☉︎</span><div><h3>Personalidade e essência</h3><p>Como você é, como se sente por dentro e como os outros te veem.</p><small>Sol, Lua e Ascendente</small></div></li>
+        <li><span class="ag g" aria-hidden="true">♄︎</span><div><h3>Carreira e vocação</h3><p>Áreas e ambientes em que você rende melhor e o tipo de trabalho que faz sentido.</p><small>Meio do Céu, casas 6 e 10</small></div></li>
+        <li><span class="ag g" aria-hidden="true">♃︎</span><div><h3>Talentos naturais</h3><p>Habilidades que vêm fácil para você e que talvez você ainda não valorize.</p><small>Júpiter, Mercúrio, casa 5</small></div></li>
+        <li><span class="ag g" aria-hidden="true">♉︎</span><div><h3>Dinheiro e prosperidade</h3><p>Como você lida com dinheiro, segurança e o próprio valor.</p><small>Casa 2, Vênus, Júpiter</small></div></li>
+        <li><span class="ag g" aria-hidden="true">♇︎</span><div><h3>Padrões que travam o crescimento</h3><p>Comportamentos que podem bloquear sua vida financeira e como trabalhar com eles.</p><small>Saturno, Plutão, casa 8</small></div></li>
+        <li><span class="ag g" aria-hidden="true">♀︎</span><div><h3>Amor e relacionamentos</h3><p>Como você ama, o que busca num parceiro e os padrões que se repetem.</p><small>Vênus, Marte, casas 5 e 7</small></div></li>
+        <li><span class="ag g" aria-hidden="true">☽︎</span><div><h3>Necessidades emocionais</h3><p>O que te traz segurança, acolhimento e paz.</p><small>Lua, casa 4</small></div></li>
+        <li><span class="ag g" aria-hidden="true">☊︎</span><div><h3>Propósito e decisões</h3><p>A direção de crescimento do seu mapa e conselhos práticos para escolher com mais consciência.</p><small>Nodos lunares, aspectos</small></div></li>
+      </ul>
+    </section>
+
+    <section id="fazer" class="block fazer">
+      <div class="fazer-grid">
+        <div class="fazer-copy">
+          <h2>Faça o seu mapa</h2>
+          <p>Primeiro calculamos e desenhamos o seu mapa, de graça. Se quiser ir além, você desbloqueia a leitura completa e baixa tudo em PDF.</p>
+          <ul class="includes">
+            <li>Desenho completo do mapa astral</li>
+            <li>Interpretação personalizada, feita para o seu mapa</li>
+            <li>Análise profunda dos principais posicionamentos</li>
+            <li>Linguagem clara e acessível</li>
+            <li>Entrega digital em PDF, na hora</li>
+          </ul>
+          <p class="price-line" id="price-line" hidden>Leitura completa: <strong id="price"></strong>, pagamento único por Pix ou cartão.</p>
+        </div>
+
+        <form id="birth-form" class="card form" novalidate>
+          <div class="field">
+            <label for="f-name">Seu nome</label>
+            <input id="f-name" name="name" type="text" autocomplete="given-name" maxlength="60" required placeholder="Como você gosta de ser chamada">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-date">Data de nascimento</label>
+              <input id="f-date" name="date" type="date" required min="1900-01-01" max="2099-12-31">
+            </div>
+            <div class="field">
+              <label for="f-time">Horário</label>
+              <input id="f-time" name="time" type="time" required>
+            </div>
+          </div>
+          <label class="check"><input id="f-notime" type="checkbox"> Não sei meu horário de nascimento</label>
+          <p class="hint" id="notime-hint" hidden>Sem o horário, o Ascendente e as casas ficam de fora e a posição da Lua pode variar. Se puder, confira na sua certidão de nascimento.</p>
+          <div class="field place-field">
+            <label for="f-place">Cidade onde nasceu</label>
+            <input id="f-place" name="place" type="text" autocomplete="off" required placeholder="Comece a digitar, ex.: Recife" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="place-list">
+            <ul id="place-list" class="place-list" role="listbox" hidden></ul>
+            <p class="hint" id="place-status" aria-live="polite"></p>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-brass btn-wide" type="submit">Calcular meu mapa</button>
+          <p class="fine">Seus dados ficam só no seu aparelho e são usados apenas para calcular o mapa.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="duvidas" class="block duvidas">
+      <h2>Dúvidas frequentes</h2>
+      <details>
+        <summary>A leitura faz previsões sobre o meu futuro?</summary>
+        <p>Não. O mapa natal descreve tendências, talentos e desafios, como um retrato. Ele não decide a sua vida: serve para você se conhecer melhor e fazer escolhas com mais clareza.</p>
+      </details>
+      <details>
+        <summary>Preciso saber o horário exato?</summary>
+        <p>Quanto mais exato, melhor. O horário define o Ascendente e as casas, que mudam a cada poucos minutos. Ele costuma estar na certidão de nascimento. Se você não souber, ainda dá para fazer o mapa, só que sem essas partes.</p>
+      </details>
+      <details>
+        <summary>Como o mapa é calculado?</summary>
+        <p>Usamos efemérides astronômicas de alta precisão, o fuso horário histórico da sua cidade (incluindo horário de verão) e o sistema de casas Placidus, o mais usado no Brasil.</p>
+      </details>
+      <details>
+        <summary>Como recebo a leitura?</summary>
+        <p>Assim que o pagamento é aprovado, a leitura aparece aqui mesmo na página, e você pode baixar tudo em PDF. Ela também fica salva neste aparelho.</p>
+      </details>
+      <details>
+        <summary>Quem escreve a interpretação?</summary>
+        <p>A leitura é gerada por inteligência artificial a partir das posições calculadas do seu mapa, seguindo critérios da astrologia tradicional e psicológica. Cada texto é escrito para o seu mapa específico.</p>
+      </details>
+    </section>
+  </main>
+
+  <main id="resultado" class="resultado" hidden>
+    <section class="block res-head">
+      <div>
+        <h1 id="res-title">Mapa natal</h1>
+        <p id="res-sub" class="res-sub"></p>
+      </div>
+      <div class="res-actions">
+        <button type="button" class="btn btn-ghost" id="btn-new">Fazer outro mapa</button>
+        <button type="button" class="btn btn-brass" id="btn-pdf" hidden>Baixar PDF</button>
+      </div>
+    </section>
+
+    <section class="block res-chart">
+      <div id="res-wheel" class="res-wheel"></div>
+      <div class="res-side">
+        <table class="positions" id="positions">
+          <caption>Posições no seu mapa</caption>
+          <thead><tr><th scope="col">Ponto</th><th scope="col">Posição</th><th scope="col">Casa</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div class="balance" id="balance"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <details class="aspects-box">
+        <summary>Aspectos do mapa <span id="aspect-count"></span></summary>
+        <ul id="aspects" class="aspects"></ul>
+      </details>
+    </section>
+
+    <section class="block unlock" id="unlock" hidden>
+      <div class="card unlock-card">
+        <h2>Agora, o que tudo isso significa para você</h2>
+        <p>A leitura completa explica o seu mapa tema por tema: personalidade, talentos, carreira, dinheiro, padrões que travam o crescimento, amor, emoções e propósito. São seis capítulos escritos para as suas posições, prontos para baixar em PDF.</p>
+        <button type="button" class="btn btn-brass" id="btn-unlock">Desbloquear leitura completa</button>
+        <p class="fine" id="unlock-note"></p>
+        <p class="form-error" id="unlock-error" role="alert" hidden></p>
+      </div>
+    </section>
+
+    <section class="block reading" id="reading" hidden>
+      <h2>Sua leitura</h2>
+      <p class="reading-status" id="reading-status" aria-live="polite"></p>
+      <div id="reading-parts"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Céu Natal é uma ferramenta de autoconhecimento. As leituras não substituem orientação médica, psicológica, jurídica ou financeira.</p>
+    <p>Busca de cidades: dados © colaboradores do <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, via Photon.</p>
+  </footer>
+
+  <!-- Documento usado para gerar o PDF (fica fora da tela) -->
+  <div id="pdf-root" aria-hidden="true"></div>
+
+  <script src="vendor/astronomy.min.js"></script>
+  <script src="vendor/luxon.min.js"></script>
+  <script src="vendor/tz-lookup.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

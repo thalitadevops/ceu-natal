@@ -1,0 +1,13 @@
+{
+  "name": "ceu-natal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site de mapa astral natal com leitura personalizada por IA",
+  "scripts": {
+    "dev": "node dev-server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
